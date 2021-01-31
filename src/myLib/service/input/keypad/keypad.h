@@ -1,6 +1,10 @@
-#include "myLib/drv/commonDrv/commonDrv.h"
+#include "myLib/drv/baseDrv/baseDrv.h"
 
 #ifdef service_input_keypad
-void initKeypad(void (*callback)(unsigned char x, unsigned char y));
-void scanKeypad();
+namespace keypad
+{
+    void init(void (*callback)(unsigned char x, unsigned char y));
+    void scan();
+} // namespace keypad
+
 #endif
